@@ -41,11 +41,11 @@
 
     <button onclick="playSound()">🔊 Sound abspielen</button>
 
-    <audio id="sound" src="sound.mp3"></audio>
+    <audio id="diff" src="sound.mp3"></audio>
 
     <script>
         function playSound() {
-            const audio = document.getElementById("sound");
+            const audio = document.getElementById("diff");
             audio.currentTime = 0;
             audio.play();
         }
@@ -53,3 +53,4 @@
 
 </body>
 </html>
+
