@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Button</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            font-size: 30px;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 15px;
+            background-color: #ff3b3b;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff1f1f;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="playSound()">🔊 Sound abspielen</button>
+
+    <audio id="sound" src="sound.mp3"></audio>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById("sound");
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
